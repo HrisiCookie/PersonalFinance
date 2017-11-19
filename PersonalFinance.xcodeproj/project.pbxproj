@@ -37,6 +37,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7637F30D1FC1D50D006EAED8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7637F30E1FC1D51E006EAED8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7637F30F1FC1D526006EAED8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		76CE48661FC08A3A00446485 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +77,9 @@
 		76CE48711FC08A3A00446485 /* PersonalFinance */ = {
 			isa = PBXGroup;
 			children = (
+				7637F30F1FC1D526006EAED8 /* Models */,
+				7637F30E1FC1D51E006EAED8 /* Views */,
+				7637F30D1FC1D50D006EAED8 /* ViewControllers */,
 				76CE48721FC08A3A00446485 /* AppDelegate.swift */,
 				76CE48741FC08A3A00446485 /* ViewController.swift */,
 				76CE48761FC08A3A00446485 /* Main.storyboard */,
