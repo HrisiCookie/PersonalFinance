@@ -24,9 +24,6 @@
 		76CE487C1FC08A3A00446485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76CE487F1FC08A3A00446485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76CE48811FC08A3A00446485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76CE48871FC091AE00446485 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		76CE48881FC091CC00446485 /* ViewControllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewControllers; sourceTree = "<group>"; };
-		76CE48891FC091D500446485 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +56,6 @@
 		76CE48711FC08A3A00446485 /* PersonalFinance */ = {
 			isa = PBXGroup;
 			children = (
-				76CE48871FC091AE00446485 /* Models */,
-				76CE48881FC091CC00446485 /* ViewControllers */,
-				76CE48891FC091D500446485 /* Views */,
 				76CE48721FC08A3A00446485 /* AppDelegate.swift */,
 				76CE48741FC08A3A00446485 /* ViewController.swift */,
 				76CE48761FC08A3A00446485 /* Main.storyboard */,
