@@ -21,6 +21,9 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         userService.userServiceDelegate = self
+        
+        guard let image = UIImage(named: "backgroundImage") else { return }
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
     
     // Actions

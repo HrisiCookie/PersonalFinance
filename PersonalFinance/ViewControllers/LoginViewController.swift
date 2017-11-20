@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     // Outlets
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginBtn: CustomButton!
+    @IBOutlet weak var loginBtn: UIButton!
     
     var userService: UserService = UserService()
     
@@ -24,7 +24,8 @@ class LoginViewController: UIViewController {
         usernameTextField.transparency()
         passwordTextField.transparency()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundImage")!)
+        guard let image = UIImage(named: "backgroundImage") else {return}
+        self.view.backgroundColor = UIColor(patternImage: image)
     }
     
     // Actions
