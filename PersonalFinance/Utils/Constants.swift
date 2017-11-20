@@ -11,4 +11,5 @@ import Foundation
 struct APIURLs {
     static let baseUrl = "http://cookie-rocks.com"
     static let loginUrl = "\(baseUrl)/accounts/rest-auth/login/"
+    static let registerUrl = "\(baseUrl)/accounts/registration/mobile/"
 }
