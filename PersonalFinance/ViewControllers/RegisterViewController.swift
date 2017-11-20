@@ -23,21 +23,16 @@ class RegisterViewController: UIViewController {
         userService.userServiceDelegate = self
     }
     
-    // Private methods    
-    private func checkForEmptyTextFields() {
+    // Actions
+    @IBAction func didPressRegister(_ sender: Any) {
         guard let username = usernameTextField.text,
             usernameTextField.text != "",
-            email = emailTextFielld.text,
+            let email = emailTextFielld.text,
             emailTextFielld.text != "",
             let password = passwordTextField.text,
             passwordTextField.text != "" else {return}
-    }
-    
-    // Actions
-    @IBAction func didPressRegister(_ sender: Any) {
-        checkForEmptyTextFields()
         
-        userService.registerUser(username: usernameTextField.text!, email: emailTextFielld.text!, password1: passwordTextField.text!, password2: passwordTextField.text!)
+        userService.registerUser(username: username, email: email, password1: password, password2: password)
     }
     
     @IBAction func didPressGoToLogin(_ sender: Any) {

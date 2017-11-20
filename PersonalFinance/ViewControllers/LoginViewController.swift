@@ -27,21 +27,16 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundImage")!)
     }
     
-    // Private methods
-    private func checkForEmptyTextFields() {
+    // Actions
+    @IBAction func didPressLogin(_ sender: Any) {
         guard let username = usernameTextField.text,
             usernameTextField.text != "",
             let password = passwordTextField.text,
             passwordTextField.text != ""
             else {
-                showAlert(title: "Missing credentials", message: "All fields must be filled in")
+               showAlert(title: "Missing credentials", message: "All fields must be filled in")
                 return
         }
-    }
-    
-    // Actions
-    @IBAction func didPressLogin(_ sender: Any) {
-        checkForEmptyTextFields()
         
         userService.loginUser(username: username, password: password)
     }
@@ -49,12 +44,11 @@ class LoginViewController: UIViewController {
     @IBAction func didPressRegisterHereBtn(_ sender: Any) {
         print("Go to registration")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let registrationVC = storyboard.instantiateViewController(withIdentifier: "\(RegisterViewController.self)") as? RegisterViewController
+        guard let registrationVC = storyboard.instantiateViewController(withIdentifier: "\(RegisterViewController.self)") as? RegisterViewController else {return}
         self.present(registrationVC, animated: true, completion: nil)
     }
 }
 
-// MARK: - UserServiceDelegate
 extension LoginViewController: UserServiceDelegate {
     func didRegisterSuccess(data: Data) {
         print("Logged in! Go to next VC.")
